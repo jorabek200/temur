@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+    <title>Mazanov.T</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">Mazanov.</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#"  class="active" style="--navAni:1">Home</a></li>
+                <li><a href="#" style="--navAni:2">About</a></li>
+                <li><a href="#" style="--navAni:3">Skills</a></li>
+                <li><a href="#" style="--navAni:4">Portfolio</a></li>
+                <li><a href="#" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="images">
+                <div class="div">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/340936297_920543255877487_1263497724451476497_n.jpg?stp=dst-jpg_s403x403&_nc_cat=110&ccb=1-7&_nc_sid=510075&_nc_ohc=k45HKJtmk1gAX_Uq2UY&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSZg3bqj42IL0QDXNcEbt-S0LpcPt-49p2EcIXITYDSng&oe=660194C8" alt="">
+                </div>
+                <span class="bg-effect-1"></span>
+                <span class="bg-effect-1"></span>
+            </div>
+            <div class="detail">
+                <h3>Hi, I'm</h3>
+                <h1><span style="color:#f9532d;"></span>Temurxon</h1> 
+                <p>Men yahshi oquvchi man 9'A' sinfda oqiman mening Ustozim Sulhonov Sarvar
+                </p>  
+                <div class="social">
+                    <a href="https://www.instagram.com/temur4eek_08?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
